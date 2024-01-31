@@ -1,0 +1,42 @@
+body {
+    box-sizing: border-box;
+    background: #eee;
+    font-family: sans-serif;
+    height: 100vh;  /* Al mover este dato podemos mover el total de tamaño que queremos que tenga nuestra página */
+}
+
+body, div, header, main, aside, footer {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr; /* De esta manera se define que habrán 2 columnas, la primera tendrá 5 fracciones y la otra tendrá 2 fracciones */
+    grid-template-rows: 1fr 8fr 1fr;    /* De esta manera se define que habrán 3 filas, la primera tendrá una fracción, la segunda tendrá 8 fracciones y la última tendrá 1 fracción */
+    height: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+    /* margin: 10px; */
+    padding: 10px;
+}
+
+.grid-container > * {
+    border: 1px solid #000;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.content {
+    /* grid-column: span 2; */
+}
+
+.aside {
+    /* grid-column: span 2; */
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
